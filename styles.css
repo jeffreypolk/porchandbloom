@@ -28,7 +28,7 @@
 *::before,
 *::after { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+html { scroll-behavior: smooth; scroll-padding-top: 92px; }
 
 body {
   margin: 0;
@@ -49,7 +49,7 @@ h1, h2, h3 {
   color: var(--sage-dark);
 }
 
-h1 em, h2 em, .brand em, .strip em {
+h1 em, h2 em, .strip em {
   font-style: italic;
   font-weight: 400;
   color: var(--terracotta);
@@ -121,22 +121,18 @@ a { color: inherit; }
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  height: 68px;
+  height: 80px;
 }
 
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  text-decoration: none;
-  font-family: var(--serif);
-  font-size: 1.35rem;
-  font-weight: 600;
-  color: var(--sage-dark);
-  white-space: nowrap;
+  flex-shrink: 0;
 }
 
-.brand-mark { width: 28px; height: 28px; color: var(--terracotta); }
+.brand img { display: block; width: auto; }
+.brand-logo { height: 60px; }
+.footer-logo { height: 110px; }
 
 .nav-links { display: none; gap: 2rem; }
 .nav-links a {
@@ -352,6 +348,48 @@ a { color: inherit; }
 .season-fall   { --season-bg: #F3E2D0; --s1: #C9734F; --s2: #D9A441; --s3: #8C3B2E; --s4: #7E8C5A; }
 .season-winter { --season-bg: #E4EBE5; --s1: #2F5D50; --s2: #A3262A; --s3: #F5F1E8; --s4: #C9B79C; }
 
+/* ---------- Swap plans ---------- */
+.swap-plan {
+  display: grid;
+  gap: 2.5rem;
+  align-items: center;
+}
+.swap-copy h2 { font-size: clamp(2rem, 4.5vw, 3rem); letter-spacing: -0.01em; }
+.swap-copy h2 em { display: block; }
+.swap-copy .section-sub { margin-bottom: 2rem; }
+
+.swap-list {
+  list-style: none;
+  margin: 0;
+  padding: 2rem 1.75rem;
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  display: grid;
+  gap: 1.5rem;
+}
+.swap-list li {
+  position: relative;
+  padding-left: 2.25rem;
+}
+.swap-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.35rem;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--blush);
+  box-shadow: inset 0 0 0 5px var(--blush-soft);
+}
+.swap-list h3 { font-size: 1.25rem; margin-bottom: 0.25em; }
+.swap-list p { color: var(--ink-soft); margin: 0; font-size: 0.98rem; }
+
+@media (min-width: 900px) {
+  .swap-plan { grid-template-columns: 1.1fr 1fr; gap: 4rem; }
+}
+
 /* ---------- CTA ---------- */
 .cta {
   position: relative;
@@ -418,6 +456,6 @@ a { color: inherit; }
 }
 
 @media (max-width: 420px) {
-  .brand { font-size: 1.15rem; }
+  .brand-logo { height: 44px; }
   .btn-small { padding: 0.5rem 0.9rem; font-size: 0.85rem; }
 }
