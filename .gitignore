@@ -1,0 +1,4 @@
+# Full-size originals stay on this machine only
+OriginalImages/
+
+node_modules/

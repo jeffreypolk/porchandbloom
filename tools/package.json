@@ -1,0 +1,11 @@
+{
+  "name": "porchandbloom-tools",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "photos": "node resize-photos.mjs"
+  },
+  "dependencies": {
+    "sharp": "^0.34.0"
+  }
+}

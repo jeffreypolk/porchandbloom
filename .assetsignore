@@ -1,0 +1,8 @@
+# Files Cloudflare Workers should NOT upload as public static assets (gitignore syntax)
+OriginalImages/
+tools/
+node_modules/
+.git/
+.gitignore
+README.md
+.claude/
