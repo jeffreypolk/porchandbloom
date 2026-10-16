@@ -3,7 +3,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "photos": "node resize-photos.mjs"
+    "photos": "node resize-photos.mjs",
+    "logos": "node logo-transparent.mjs"
   },
   "dependencies": {
     "sharp": "^0.34.0"
