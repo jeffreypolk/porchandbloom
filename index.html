@@ -91,9 +91,15 @@
               fresh arrangements, so you come home to something beautiful all
               year.
             </p>
-            <div class="hero-actions">
-              <a href="#contact" class="btn">Start Your Porch Makeover</a>
-              <a href="#services" class="btn btn-ghost">See What We Do</a>
+            <div class="hero-cta">
+              <p class="booking-note">
+                <span aria-hidden="true">&#10052;</span> Now booking for the
+                winter/ Christmas season!
+              </p>
+              <div class="hero-actions">
+                <a href="#contact" class="btn">Start Your Porch Makeover</a>
+                <a href="#services" class="btn btn-ghost">See What We Do</a>
+              </div>
             </div>
           </div>
 
@@ -107,7 +113,10 @@
               <figure class="carousel-slide" aria-label="1 of 3">
                 <img
                   src="images/work/fall-container-black-eyed-susans-800.webp"
-                  srcset="images/work/fall-container-black-eyed-susans-800.webp 800w, images/work/fall-container-black-eyed-susans-1600.webp 1600w"
+                  srcset="
+                    images/work/fall-container-black-eyed-susans-800.webp   800w,
+                    images/work/fall-container-black-eyed-susans-1600.webp 1600w
+                  "
                   sizes="(min-width: 540px) 480px, calc(100vw - 32px)"
                   width="800"
                   height="1067"
@@ -118,7 +127,10 @@
               <figure class="carousel-slide" aria-label="2 of 3">
                 <img
                   src="images/work/fall-porch-container-pumpkins-800.webp"
-                  srcset="images/work/fall-porch-container-pumpkins-800.webp 800w, images/work/fall-porch-container-pumpkins-1600.webp 1600w"
+                  srcset="
+                    images/work/fall-porch-container-pumpkins-800.webp   800w,
+                    images/work/fall-porch-container-pumpkins-1600.webp 1600w
+                  "
                   sizes="(min-width: 540px) 480px, calc(100vw - 32px)"
                   width="800"
                   height="1067"
@@ -129,7 +141,10 @@
               <figure class="carousel-slide" aria-label="3 of 3">
                 <img
                   src="images/work/fall-container-celosia-kale-800.webp"
-                  srcset="images/work/fall-container-celosia-kale-800.webp 800w, images/work/fall-container-celosia-kale-1600.webp 1600w"
+                  srcset="
+                    images/work/fall-container-celosia-kale-800.webp   800w,
+                    images/work/fall-container-celosia-kale-1600.webp 1600w
+                  "
                   sizes="(min-width: 540px) 480px, calc(100vw - 32px)"
                   width="800"
                   height="1067"
@@ -622,11 +637,21 @@
         }
 
         track.addEventListener("scroll", markCurrent, { passive: true });
-        carousel.querySelector(".carousel-prev").addEventListener("click", () => goTo(current - 1));
-        carousel.querySelector(".carousel-next").addEventListener("click", () => goTo(current + 1));
+        carousel
+          .querySelector(".carousel-prev")
+          .addEventListener("click", () => goTo(current - 1));
+        carousel
+          .querySelector(".carousel-next")
+          .addEventListener("click", () => goTo(current + 1));
         track.addEventListener("keydown", (e) => {
-          if (e.key === "ArrowLeft") { e.preventDefault(); goTo(current - 1); }
-          if (e.key === "ArrowRight") { e.preventDefault(); goTo(current + 1); }
+          if (e.key === "ArrowLeft") {
+            e.preventDefault();
+            goTo(current - 1);
+          }
+          if (e.key === "ArrowRight") {
+            e.preventDefault();
+            goTo(current + 1);
+          }
         });
         markCurrent();
 

@@ -181,6 +181,29 @@ a { color: inherit; }
 
 .hero-actions { display: flex; flex-wrap: wrap; gap: 0.8rem; }
 
+/* Shrink to the buttons' width so the note centers over them */
+.hero-cta {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.booking-note {
+  display: inline-flex;
+  text-align: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  background: #E4EBE5;
+  color: #2F5D50;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+.booking-note span { color: #A3262A; }
+
 .hero-art {
   max-width: 480px;
   width: 100%;
